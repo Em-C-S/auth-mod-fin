@@ -1,30 +1,30 @@
-'use strict';
+// 'use strict';
 
-class DataCollection {
-    constructor(model) {
-        this.model = model;
-    }
+// class DataCollection {
+//     constructor(model) {
+//         this.model = model;
+//     }
 
-    get(id) {
-        if (id) {
-            return this.model.findOne({ where: { id }});
-        } else {
-            return this.model.findAll({});
-        }
-    }
+//     get(id) {
+//         if (id) {
+//             return this.model.findOne({ where: { id }});
+//         } else {
+//             return this.model.findAll({});
+//         }
+//     }
 
-    create(record) {
-        return this.model.create(record);
-    }
+//     create(record) {
+//         return this.model.create(record);
+//     }
 
-    update(id, data) {
-        .then(record => record.update(data));
-        return this.model.findOne({ where: { id }});
-    }
+//     update(id, data) {
+//         .then(record => record.update(data));
+//         return this.model.findOne({ where: { id }});
+//     }
 
-    delete(id) {
-        return this.model.destroy({ where: { id }});
-    }  
-  }
+//     delete(id) {
+//         return this.model.destroy({ where: { id }});
+//     }  
+//   }
   
-  module.exports = DataCollection;
+//   module.exports = DataCollection;

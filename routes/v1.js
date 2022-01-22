@@ -1,14 +1,14 @@
 'use strict';
 
 const express = require('express');
-const dataModules = require('../models');
+const userModels = require('./models');
 
 const router = express.Router();
 
 router.param('model', (req,res,next) => {
   const modelName = req.params.model;
-  if(dataModules[modelName]){
-    req.model = dataModules[modelName];
+  if(userModels[modelName]){
+    req.model = userModels[modelName];
     next();
   } else {
     next('Invalid Model'); 

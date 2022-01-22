@@ -1,6 +1,6 @@
 'use strict';
 
-const Post = (sequelize, DataTypes) => sequelize.define('Post', {
+const postSchema = (sequelize, DataTypes) => sequelize.define('Post', {
   text: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -11,6 +11,4 @@ const Post = (sequelize, DataTypes) => sequelize.define('Post', {
   },
 });
 
-module.exports = Post;
-
-
+module.exports = postSchema;
