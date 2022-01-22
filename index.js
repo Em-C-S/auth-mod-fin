@@ -2,8 +2,8 @@
 
 require('dotenv').config();
 const server = require('./lib/server.js');
-const { db } = require('./lib/models');
+const { db } = require('./lib/models.js');
 
 db.sync().then(() => {
-  app.start(process.env.PORT || 3001);
+  server.start(process.env.PORT || 3001);
 });
