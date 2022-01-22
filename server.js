@@ -17,7 +17,7 @@ const app = express();
 app.use(express.json());
 app.use(morgan('tiny'));
 app.use(server);
-app.use(cors());
+app.use(cors);
 app.use(logger);
 
 // app.use(express.urlencoded({ extended: true }));
